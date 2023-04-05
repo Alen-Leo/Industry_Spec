@@ -1,6 +1,7 @@
 # <center>*IPMI FRU Information Storage Definition*</center>
 
 ## FRU Information Device Format
+
 + **Common Header (necessary)**
 + **Internal Use Area (optional)**
 + **Chassis Info Area (optional)**
@@ -14,54 +15,68 @@
 
 ----------------------------------------------------------------------------
 
-## Suggested Storage Organization For 2Kb EEPROM
-![SuggestedStorageOrganization](../../Source/Industry_IPMI_FRU_SuggestedStorageOrganization.png)
+## Suggested Storage Organization For 2Kb(256 Bytes) EEPROM
+
+![FRU_SuggestedStorageOrganization](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_SuggestedStorageOrganization.png)
 
 ----------------------------------------------------------------------------
 
 ## Different Area Format
+
 ### 1. Common Header Format
-![CommonHeaderFormat](../../Source/Industry_IPMI_FRU_CommonHeaderFormat.png)
+
+![FRU_CommonHeaderFormat](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_CommonHeaderFormat.png)
 
 ### 2. Internal Use Area Format
-![InternalUseAreaFormat](../../Source/Industry_IPMI_FRU_InternalUseAreaFormat.png)
+
+![Industry_IPMI_FRU_InternalUseAreaFormat](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_InternalUseAreaFormat.png)
 
 ### 3. Chassis Info Area Format
-![ChassisInfoAreaFormat](../../Source/Industry_IPMI_FRU_ChassisInfoAreaFormat.png)
+![FRU_ChassisInfoAreaFormat](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_ChassisInfoAreaFormat.png)
 > **Chassis Type** The enumeration values for System Enclosure and Chassis Types is defined in the [SMBIOS] specification, Table 16 – System Enclosure or Chassis Types.
 
 ### 4. Board Info Area Format
-![BoardInfoAreaFormat](../../Source/Industry_IPMI_FRU_BoardInfoAreaFormat.png)
+
+![FRU_BoardInfoAreaFormat](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_BoardInfoAreaFormat.png)
 
 ### 5. Product Info Area Format
-![ProductInfoAreaFormat](../../Source/Industry_IPMI_FRU_ProductInfoAreaFormat.png)
+![Industry_IPMI_FRU_ProductInfoAreaFormat](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_ProductInfoAreaFormat.png)
 
 ### 6. MultiRecord Info Area Format
 #### a. Record Header
-![MultiRecordHeader](../../Source/Industry_IPMI_FRU_MultiRecordHeader.png)
+![FRU_MultiRecordHeader](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_MultiRecordHeader.png)
+
 **Record Type**
-![MultiRecordHeader_RecordType](../../Source/Industry_IPMI_FRU_MultiRecordHeader_RecordType.png)
+
+![FRU_RecordType](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_MultiRecordHeader_RecordType.png)
+
 **End of list**
 This bit indicates if this record is the last record in the MultiRecord area. If this bit is zero, it indicates that one or more records follow.
+
 #### b. Record Field Definitions
 **Record Type 0x00 -> Power Supply Information**
-![MultiRecordField_RecordType0x00](../../Source/Industry_IPMI_FRU_MultiRecordField_RecordType0x00.png)
+
+![FRU_MultiRecordField_RecordType0x00](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_MultiRecordField_RecordType0x00.png)
+
+
 
 --------------------------------------------------------------------------------
 
 ## Appendix A - FRU Information Layout Example
-![FruInformationLayoutExample](../../../../Source/Industry_IPMI_FRU_FruInformationLayoutExample.png)
+![FRU_FruInformationLayoutExample](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_FruInformationLayoutExample.png)
 
 --------------------------------------------------------------------------------
 
 ## Appendix B - TYPE/LENGTH BYTE FORMAT
 #### a. Specification
-![TypeLengthSpec](../../../../Source/Industry_IPMI_FRU_TypeLengthSpec.png)
+![FRU_TypeLengthSpec](error)
 #### b. BCD PLUS definition
-![BcdPlusDefine](../../Source/Industry_IPMI_FRU_TypeLengthSpec.png)
+![FRU_TypeLengthSpec](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_TypeLengthSpec.png)
 #### c. 6-bit ASCII definition
-![6bitAsciiDefinition01](../../Source/Industry_IPMI_FRU_6bitAsciiDefinition01.png)
-![6bitAsciiDefinition02](../../Source/Industry_IPMI_FRU_6bitAsciiDefinition02.png)
+![FRU_6bitAsciiDefinition01](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_6bitAsciiDefinition01.png)
+
+![FRU_6bitAsciiDefinition02](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/FRU_6bitAsciiDefinition02.png)
+
 #### d. Language Codes
 Any language code other than English indicates that the string data is encoded as Unicode when bits 7:6 of the Type/Length code = 11b.
 

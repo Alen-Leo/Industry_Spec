@@ -1,4 +1,5 @@
 <!--
+
  * @FileName: PBF.md
  * @Author: Alen luojiaming299@163.com
  * @CreateTime: 2022-09-10 08:49:04
@@ -10,7 +11,7 @@
 > Base on PBF V3.0
 
 ## 1. Overview
-![SoftwareArchitecture](../../Source/Industry_Phytium_PBF_SoftwareArchitecture.png)
+![Phytium_PBF_SoftwareArchitecture](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/Phytium_PBF_SoftwareArchitecture.png)
 ### 1.1 固件分为三层：
 + 飞腾芯片内置可信根（Phytium Boot ROM，PBR）
   + PBR 是飞腾处理器**安全版**芯片内置的可信启动根，负责对 PBF 进行验签。
@@ -21,19 +22,26 @@
   + UEFI & U-Boot.
 > 注：PBF、SFW、OS 等都会与带外控制系统（Outband Control System）进行通信。
 ### 1.2 执行流程
-![Process](../../Source/Industry_Phytium_PBF_Process.png)
+
+![Phytium_PBF_Process](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/Phytium_PBF_Process.png)
 
 --------------------------------------------------------------------------------
 
 ## 2. 飞腾系统服务
+
 ### 2.1 服务总表
 PBF 运行在 EL3，上层软件通过 AArch64 系统调用指令 SMC 调用功能服务。
-![SystemService01](../../Source/Industry_Phytium_PBF_SystemService01.png)
-![SystemService02](../../Source/Industry_Phytium_PBF_SystemService02.png)
-![SystemService03](../../Source/Industry_Phytium_PBF_SystemService03.png)
+
+![Phytium_PBF_SystemService01](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/Phytium_PBF_SystemService01.png)
+
+![Phytium_PBF_SystemService02](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/Phytium_PBF_SystemService02.png)
+
+![Phytium_PBF_SystemService03](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/Phytium_PBF_SystemService03.png)
+
 ### 2.2 错误码表
-![ErrorReturn01](../../Source/Industry_Phytium_PBF_ErrorReturn01.png)
-![ErrorReturn02](../../Source/Industry_Phytium_PBF_ErrorReturn02.png)
+![Phytium_PBF_ErrorReturn01](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/Phytium_PBF_ErrorReturn01.png)
+
+![Phytium_PBF_ErrorReturn02](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/Phytium_PBF_ErrorReturn02.png)
 
 
 --------------------------------------------------------------------------------

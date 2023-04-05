@@ -19,9 +19,10 @@ PSCI provides a standard interface definition to support the interoperation and 
   + System shutdown and reset.
 + Provides an interface that supervisory software can use in conjunction with Firmware Table (FDT and ACPI) descriptions to support the generalization of power management code.
 ### 1.2 Softward stacks on Arm-based systems
-![SoftwareStacks](../../Source/Industry_Arm_PSCI_SoftwareStacks.png)
+![PSCI_SoftwareStacks](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/PSCI_SoftwareStacks.png)
 
 --------------------------------------------------------------------------------
 
 ## Reference
+
 [1] [Arm Power State Coordination Interface *Platform Design Document*](https://developer.arm.com/documentation/den0022/e/)
