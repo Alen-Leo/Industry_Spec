@@ -9,7 +9,8 @@
 # <center>*Hand-Off Block (HOB)*</center>
 ## 1. Overview
 **Example HOB Producer Phase Memory Map and Usage:**
-![Example HOB Producer Phase Memory Map and Usage](../../Source/Industry_PI_HOB_MemoryMapAndUsage.png)
+
+![PI_HOB_MemoryMapAndUsage](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/PI_HOB_MemoryMapAndUsage.png)
 
 ## 2. HOB Construction Rules
 The first HOB in the HOB list must be the Phase Handoff Information Table (PHIT) HOB. The last HOB in the HOB list must be the End of HOB List HOB. Only HOB producer phase components are allowed to make additions or changes to HOBs. Once the HOB list is passed into the HOB consumer phase, it is effectively read only.
@@ -89,6 +90,8 @@ EFI_STATUS
 ```
 ## Appendix
 **Pi Phase Flow:**
-![Pi Phase Flow](../../Source/Industry_PI_HOB_PiPhaseFlow.png)
+
+![PI_HOB_PiPhaseFlow](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/PI_HOB_PiPhaseFlow.png)
+
 ## Reference
 [1] [UEFI PI SPEC V1.7.](https://uefi.org/sites/default/files/resources/PI_Spec_1_7_A_final_May1.pdf)

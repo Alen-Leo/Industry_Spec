@@ -9,18 +9,23 @@
 # <center>*System Management BIOS (SMBIOS)*</center>
 
 ## 1. SMBIOS EPS
-![SmBiosEPS](../../Source/Industry_SMBIOS_EPS.png)
+
+![SMBIOS_EPS](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/SMBIOS_EPS.png)
+
 The only access method defined for the SMBIOS structures is a table-based method. It provides the SMBIOS structures as a packed list of data referenced by a table entry point.
 
 **SMBIOS 访问流程：**
+
 1. 通过关键字或者 GUID 找到 Entry Point structure.
 2. 通过 EPS 读取 SMBIOS Structure 的表数量和表起始地址.
 
 ## 2. SMBIOS Structure
 Each SMBIOS structure has a formatted section and an optional unformed section. The formatted section of each structure begins with a 4-byte header. Remaining data in the formatted section is determined by the structure type, as is the overall length of the formatted section.
-![SmBiosStructure](../../Source/Industry_SMBIOS_SmBiosStructure.png)
+
+![SMBIOS_SmBiosStructure](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/SMBIOS_SmBiosStructure.png)
+
 ### 2.1 Structure header format
-![StructureHeaderFormat](../../Source/Industry_SMBIOS_StructureHeaderFormat.png)
+![SMBIOS_StructureHeaderFormat](https://cdn.jsdelivr.net/gh/Alen-Leo/Images/SMBIOS_StructureHeaderFormat.png)
 ### 2.2 Text Strings
 Text strings associated with a given SMBIOS structure are appended directly after the formatted portion of the structure. Each string is terminated with a null (00h) BYTE and the set of strings is terminated with an additional null (00h) BYTE.If a string field references no string, a null (0) is placed in that string field. If the formatted portion of the structure contains string-reference fields and all the string fields are set to 0 (no string references), the formatted section of the structure is followed by two null (00h) BYTES.
 ## 3. EFI_SMBIOS_PROTOCOL
